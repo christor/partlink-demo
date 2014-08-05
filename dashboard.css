@@ -1,0 +1,11 @@
+.dashboard{
+	height:10%;
+	text-align:center;
+	border:solid;
+}
+.dashboard li{
+	border:solid;
+	display:inline;
+	margin-right:10%;
+	margin-left:10%;
+}

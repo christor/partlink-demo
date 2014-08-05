@@ -1,0 +1,59 @@
+<html ng-app="explorePanel">
+	<header>
+		<title>Explore</title>
+		<link href="explore.css" type="text/css" rel="stylesheet"/>
+		<script type="text/javascript" src="js/libs/angular.min.js"></script>
+		<script type="text/javascript" src="js/explore-app.js"></script>
+	</header>
+	<body id = "TotalController" ng-controller="TotalController">
+		<div id="search-panel">
+			<p>
+				<input type="text" id="search-box" placeholder="Enter Niin Number"/>
+				<button id="add-item">Add</button>
+			</p>
+			<ul class="results" id = "search-result">
+			</ul>
+		</div>
+		<div id="result-panel" ng-controller="TabController as tab">
+			<!--- result tabs -->
+				<ul class="nav">
+					<li ng-class="{active: tab.isSet(1)}">
+						<a href ng-click = "tab.setTab(1)">Description</a>
+					</li>
+					<li ng-class="{active: tab.isSet(2)}">
+						<a href ng-click = "tab.setTab(2)">Specification</a>
+					</li>
+					<li ng-class="{active: tab.isSet(3)}">
+						<a href ng-click = "tab.setTab(3)">Buy</a>
+					</li>
+					<li ng-class="{active: tab.isSet(4)}">
+						<a href ng-click = "tab.setTab(4)">Download</a>
+					</li>
+					<li ng-class="{active: tab.isSet(5)}">
+						<a href ng-click = "tab.setTab(5)">Upload</a>
+					</li>
+				</ul>
+			<div class="results">
+				<section id="InfoController" ng-controller="InfoController as info">
+					<div ng-show="tab.isSet(1)">
+						<blockquote>{{information}}</blockquote>
+					</div>
+					<div ng-show="tab.isSet(2)">
+						<blockquote>Specification</blockquote>
+					</div>
+					<div ng-show="tab.isSet(3)">
+						<blockquote>Buy</blockquote>
+					</div>
+					<div ng-show="tab.isSet(4)">
+						<blockquote>Download</blockquote>
+					</div>
+					<div ng-show="tab.isSet(5)">
+						<blockquote>Upload</blockquote>
+					</div>
+				</section>
+			</div>
+		</div>
+		<script src="js/libs/jquery.js"></script>
+		<script src="js/explore.js"></script>
+	</body>
+</html>
