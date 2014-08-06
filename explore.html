@@ -36,14 +36,22 @@
 			<div class="results">
 				<section id="InfoController" ng-controller="InfoController as info">
 					<div ng-show="tab.isSet(1)">
-						<blockquote>{{information}}</blockquote>
+						<blockquote>{{information.descriptions}}</blockquote>
 					</div>
 					<div ng-show="tab.isSet(2)">
 						<blockquote>Specification</blockquote>
 					</div>
-					<div ng-show="tab.isSet(3)">
-						<blockquote>Buy</blockquote>
-					</div>
+					<ul id = "cage-result">
+						<div ng-show="tab.isSet(3)" ng-repeat = "cage in information.cageInfo">
+							<li><h4>{{cage.cagename.value}} {{cage.cagecode.value}}</h4><span>+</span>
+								<div class="cageinfo">
+									<p>{{cage.street.value}} {{cage.locality.value}}</p>
+									<p>{{cage.region.value}}, {{cage.country.value}}, {{cage.postal.value}}</p>
+									<p>fax number: {{cage.faxnum.value}}, phone number: {{cage.voicenum.value}}</p>
+								</div>	
+							</li>				
+						</div>
+					</ul>
 					<div ng-show="tab.isSet(4)">
 						<blockquote>Download</blockquote>
 					</div>
@@ -55,5 +63,8 @@
 		</div>
 		<script src="js/libs/jquery.js"></script>
 		<script src="js/explore.js"></script>
+		<script src="js/niin-description.js"></script>
+		<script src="js/niin-cage.js"></script>
+		<script src="niin-specification.js"></script>
 	</body>
 </html>

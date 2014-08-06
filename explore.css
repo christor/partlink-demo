@@ -2,8 +2,6 @@ body{
 	background-color:#99B2CC;
 	padding-left:10px;
 	padding-right:10px;
-
-
 }
 
 
@@ -133,21 +131,38 @@ body{
 	color:white;
 }
 .active{
-	background-color:white;
+	background-color:#0099CC !important;
 }
-
-#options{
-	height:10%;
-	width:100%;
-	border:solid 1px;
+.highlight{
+	background-color:#00CCFF;
+}
+#cage-result{
 	padding:0;
-	margin-top:1em;
+}
+
+#cage-result li{
+	list-style:none;
+	cursor:pointer;
+	padding-left:5%;
 
 }
-.option{
-	height:100%;
-	width:33%;
+#cage-result span{
+	display:inline-block;
+	height:1px;
+	float:right;
+	margin-right:5%;
+	/*
+	margin-bottom:20%;
+	text-align:right;
+	padding-bottom:5%;
+	*/
 
-	margin-right:-4px;
-	font-size:14pt;
+}
+#cage-result h4{
+	display:inline;
+}
+#cage-result .cageinfo{
+	margin:5px 0;
+	display:none;
+	
 }
