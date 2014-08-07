@@ -2,19 +2,33 @@
 	<header>
 		<title>Welcome</title>
 		<link href="main.css" type="text/css" rel="stylesheet">
+		<link href="dashboard.css" type="text/css" rel="stylesheet">
 	</header>
 	<body>
-		<div class="wrapper">
-			<div class="menu">
-				<ul>
-					<li><a href="#" id="explore">Explore</a></li>
-					<li><a href="#" id="design">Design</a></li>
-					<li><a href="#" id="create">Create</a></li>
-				</ul>
-				<div class="circle">
-					
+		<div class = "navigationtab">
+			<img id = "xsb" src="pictures/XSB_200.jpg"/>
+		</div>
+		<div id = "navigation-intro">
+			<ul>
+				<li><a href="explore.html" value = "explore" class = "show"><h4>Explore</h4></a></li>
+				<li><a href="#" value = "design" class = "show"><h4>Design</h4></a></li>
+				<li><a href="#" value = "create" class = "show"><h4>Create</h4></a></li>
+			</ul>
+			<div id = "navigation-explain">
+				<div id = "explore" class = "text">
+					<p><strong>Explore the part database!</strong> <br/> Find parts you can buy or download from other users. We also include part specifications to fit your needs during your design process. If the part you want is not available for download, you can contribute by uploading your own cad file!</p>
+				</div>
+				<div id = "design" class = "text">
+					<p><strong>Design your own product using our part ontology!</strong> <br/>
+						With our easy to use interface, you now just need to specify what parts you need for your product and we will find everything for you. Do you want to prototype it? Then you can download the cad files for 3d printing. Or if you have already prototyped it, we will tell you the suppliers of these parts!
+					</p>
+				</div>
+				<div id = "create" class = "text">
+					<p><strong>Now that you have designed your very own product, let's help you build it!</strong><br/> With our enthusiastic community, you can find out how you can print out the parts you need that meets your specification!</p>
 				</div>
 			</div>
 		</div>
+		<script src="js/libs/jquery.js"></script>
+		<script src="js/main-app.js"></script>
 	</body>
 </html>

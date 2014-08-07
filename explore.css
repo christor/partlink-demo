@@ -4,7 +4,13 @@ body{
 	padding-right:10px;
 }
 
+#explore-page{
+	margin:5em auto 5em auto;
+	padding-left:5em;
+	width:1000px;
+	height:500px;
 
+}
 #search-panel{
 	height:25em;
 	width:20em;
@@ -14,7 +20,8 @@ body{
 	border-radius:10px;
 	padding-left:0.5em;
 	padding-right:1em;
-	padding-bottom:4em;
+	padding-bottom:3.5em;
+	padding-top:0.5em;
 	float:left;
 
 	
@@ -126,6 +133,8 @@ body{
 
 .nav a{
 	text-decoration:none;
+	height:100%;
+	width:100%;
 	font-size: 12pt;
 	font-family: ariel, sans-serif;
 	color:white;

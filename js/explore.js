@@ -4,7 +4,7 @@ var outputType = "application/sparql-results+json";
 // map for redundant values
 var map = [];
 
-// helper for creating uri
+// helper function for creating uri
 function create_url(query){
 	var url = sparqlEndpointUrl + "?" + "output=" + encodeURIComponent(outputType) + "&query=" + encodeURIComponent(query);
     return url;

@@ -2,69 +2,74 @@
 	<header>
 		<title>Explore</title>
 		<link href="explore.css" type="text/css" rel="stylesheet"/>
+		<link href="dashboard.css" type="text/css" rel="stylesheet">
 		<script type="text/javascript" src="js/libs/angular.min.js"></script>
 		<script type="text/javascript" src="js/explore-app.js"></script>
 	</header>
 	<body id = "TotalController" ng-controller="TotalController">
-		<div id="search-panel">
-			<p>
-				<input type="text" id="search-box" placeholder="Enter Niin Number"/>
-				<button id="add-item">Add</button>
-			</p>
-			<ul class="results" id = "search-result">
-			</ul>
+		<div class = "navigationtab">
 		</div>
-		<div id="result-panel" ng-controller="TabController as tab">
-			<!--- result tabs -->
-				<ul class="nav">
-					<li ng-class="{active: tab.isSet(1)}">
-						<a href ng-click = "tab.setTab(1)">Description</a>
-					</li>
-					<li ng-class="{active: tab.isSet(2)}">
-						<a href ng-click = "tab.setTab(2)">Specification</a>
-					</li>
-					<li ng-class="{active: tab.isSet(3)}">
-						<a href ng-click = "tab.setTab(3)">Buy</a>
-					</li>
-					<li ng-class="{active: tab.isSet(4)}">
-						<a href ng-click = "tab.setTab(4)">Download</a>
-					</li>
-					<li ng-class="{active: tab.isSet(5)}">
-						<a href ng-click = "tab.setTab(5)">Upload</a>
-					</li>
+		<div id="explore-page">
+			<div id="search-panel">
+				<p>
+					<input type="text" id="search-box" placeholder="Enter Niin Number"/>
+					<button id="add-item">Add</button>
+				</p>
+				<ul class="results" id = "search-result">
 				</ul>
-			<div class="results">
-				<section id="InfoController" ng-controller="InfoController as info">
-					<div ng-show="tab.isSet(1)">
-						<blockquote>{{information.descriptions}}</blockquote>
-					</div>
-					<div ng-show="tab.isSet(2)">
-						<blockquote>Specification</blockquote>
-					</div>
-					<ul id = "cage-result">
-						<div ng-show="tab.isSet(3)" ng-repeat = "cage in information.cageInfo">
-							<li><h4>{{cage.cagename.value}} {{cage.cagecode.value}}</h4><span>+</span>
-								<div class="cageinfo">
-									<p>{{cage.street.value}} {{cage.locality.value}}</p>
-									<p>{{cage.region.value}}, {{cage.country.value}}, {{cage.postal.value}}</p>
-									<p>fax number: {{cage.faxnum.value}}, phone number: {{cage.voicenum.value}}</p>
-								</div>	
-							</li>				
-						</div>
+			</div>
+			<div id="result-panel" ng-controller="TabController as tab">
+				<!--- result tabs -->
+					<ul class="nav">
+						<li ng-class="{active: tab.isSet(1)}">
+							<a href ng-click = "tab.setTab(1)">Description</a>
+						</li>
+						<li ng-class="{active: tab.isSet(2)}">
+							<a href ng-click = "tab.setTab(2)">Specification</a>
+						</li>
+						<li ng-class="{active: tab.isSet(3)}">
+							<a href ng-click = "tab.setTab(3)">Buy</a>
+						</li>
+						<li ng-class="{active: tab.isSet(4)}">
+							<a href ng-click = "tab.setTab(4)">Download</a>
+						</li>
+						<li ng-class="{active: tab.isSet(5)}">
+							<a href ng-click = "tab.setTab(5)">Upload</a>
+						</li>
 					</ul>
-					<div ng-show="tab.isSet(4)">
-						<blockquote>Download</blockquote>
-					</div>
-					<div ng-show="tab.isSet(5)">
-						<blockquote>Upload</blockquote>
-					</div>
-				</section>
+				<div class="results">
+					<section id="InfoController" ng-controller="InfoController as info">
+						<div ng-show="tab.isSet(1)">
+							<blockquote>{{information.descriptions}}</blockquote>
+						</div>
+						<div ng-show="tab.isSet(2)">
+							<blockquote>Specification</blockquote>
+						</div>
+						<ul id = "cage-result">
+							<div ng-show="tab.isSet(3)" ng-repeat = "cage in information.cageInfo">
+								<li><h4>{{cage.cagename.value}} {{cage.cagecode.value}}</h4><span>+</span>
+									<div class="cageinfo">
+										<p>{{cage.street.value}} {{cage.locality.value}}</p>
+										<p>{{cage.region.value}}, {{cage.country.value}}, {{cage.postal.value}}</p>
+										<p>fax number: {{cage.faxnum.value}}, phone number: {{cage.voicenum.value}}</p>
+									</div>	
+								</li>				
+							</div>
+						</ul>
+						<div ng-show="tab.isSet(4)">
+							<blockquote>Download</blockquote>
+						</div>
+						<div ng-show="tab.isSet(5)">
+							<blockquote>Upload</blockquote>
+						</div>
+					</section>
+				</div>
 			</div>
 		</div>
 		<script src="js/libs/jquery.js"></script>
 		<script src="js/explore.js"></script>
 		<script src="js/niin-description.js"></script>
 		<script src="js/niin-cage.js"></script>
-		<script src="niin-specification.js"></script>
+		<script src="js/niin-specification.js"></script>
 	</body>
 </html>

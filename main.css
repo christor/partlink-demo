@@ -1,69 +1,81 @@
 body{
 	background-color:#99B2CC;
-}
-.wrapper{
-	position:relative;
-	margin: 10em auto 5em auto;
-	width:40em;
-	height:40em;
-	border-radius:50%;
-	background:#093b62;
-	box-shadow:inset 0px 0px 30px rgba(0,0,0,0.3);
-	
-}
-.menu{
-	margin-left:auto;
-	margin-right:auto;
-	padding-top:5.5em;
-	padding-left:7em;
+	font-family:ariel, sans-serif;
 }
 
-.circle{
+#xsb{
+	margin-top:0;
+	height:4em;
+	width:4em;
+}
+#navigation-intro{
+	top:5em;
+	width:30em;
+	height:30em;
+	border:solid;
+	border-radius:5px;
+	margin:5em auto 5em auto;
+	overflow:hidden;
+	padding:0;
+	overflow:hidden;
+
+}
+#navigation-intro ul{
+	margin-top:-5px;
+	height:20%;
+	width:100%;
+
+	padding-left:0.3em;
+	overflow:hidden;
+
+}
+#navigation-intro li{
+	display:inline-block;
+	height:100%;
+	width:33%;
+	border-right:solid white;
+	margin-left:-5px;
+	text-align:center;
+	background-color:#093662;
+	overflow:hidden;
+}
+#navigation-intro a{
 	position:absolute;
-	margin-left:auto;
-	margin-right:auto;
-	width:65%;
-	height:65%;
-	border-radius:50%;
-	background:white;
-	box-shadow:inset 0px 0px 30px rgba(0,0,0,0.3);
+	height:4.8em;
+	width:9.9em;
+	margin-top:0.2em;
+	margin-left:-5em;
+	margin-bottom:-2em;
+	text-decoration:none;
+	color:white;
+	padding-top:1em;
 }
 
-.menu li{
-	font-size:1em;
-	width:26em;
-	height:26em;
-	position:fixed;
-	z-index:10;
-	bottom:-13em;
-	left:50%;
-	border-radius:50%;
-	transform:scale(0.1);
-	transition:all .3s ease;
+.text{
+	position:absolute;
+	display:none;
 }
+.choicetab{
+	background-color: #6B86A1;
+}
+.text{
+	padding-left:0.5em;
+}
+.text p{
+	height:20em;
+	width:29em;
+	position:absolute;
+}
+/*
+#navigation-intro li a{
+	display:block;
+	border:solid white;
+	width:95%;
+	height:95%;
+	position:absolute;
+	text-decoration:none;
+	color:white;
+	text-align:center;
 
-.menu li:nth-child(1) {
-  bottom:3em;
-  left: 13.5em;
 }
- 
-.menu li:nth-child(2) {
-  top: 12em;
-  left: 1.5em;
-  -webkit-transform: rotate(285deg);
-  -moz-transform: rotate(285deg);
-  -ms-transform: rotate(285deg);
-  -o-transform: rotate(285deg);
-  transform: rotate(285deg);
-}
- 
-.menu li:nth-child(3) {
-  top:12em;
-  right: 1.5em;
-  -webkit-transform: rotate(75deg);
-  -moz-transform: rotate(75deg);
-  -ms-transform: rotate(75deg);
-  -o-transform: rotate(75deg);
-  transform: rotate(75deg);
-}
-
+*/
