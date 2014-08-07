@@ -11,6 +11,44 @@
 
 
 }
+
+#xsb{
+	margin-top:0;
+	height:4em;
+	width:4em;
+	display:block;
+	float:left;
+
+}
+.login{
+	display:inline-block;
+	height:2em;
+	width:40em;
+	color:white;
+	font-family:ariel, sans-serif;
+	text-align:right;
+	margin-left:7em;
+	margin-top:2em;
+
+}
+#login{
+	background-color:#00CCFF;
+	border-radius:5px;
+	font-weight:bold;
+	color: white;
+}
+#login:hover{
+	cursor:pointer;
+}
+#signup{
+	background-color:#00CCFF;
+	border-radius:5px;
+	font-weight:bold;
+	color: white;
+}
+#signup:hover{
+	cursor:pointer;
+}
 .dashboard{
 	height:10%;
 	text-align:center;
