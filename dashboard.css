@@ -1,5 +1,5 @@
 .navigationtab{
-	width:100em;
+	width:70em;
 	min-height:4em;
 	max-height:4em;
 	border:solid;
@@ -19,6 +19,25 @@
 	display:block;
 	float:left;
 
+}
+.navigation-subtab{
+	top:2em;
+	display:inline-block;
+	height:2em;
+	width:15em;
+	padding:0;
+	text-align:center;
+}
+.navigation-subtab li{
+	display:inline-block;
+	width:4em;
+	height:2em;
+
+
+}
+.navigation-subtab a{
+	text-decoration:none;
+	color:white;
 }
 .login{
 	display:inline-block;
@@ -49,6 +68,8 @@
 #signup:hover{
 	cursor:pointer;
 }
+
+/*
 .dashboard{
 	height:10%;
 	text-align:center;
@@ -60,3 +81,4 @@
 	margin-right:10%;
 	margin-left:10%;
 }
+*/
